@@ -25,7 +25,6 @@ export const CardContainer = styled.div`
 
 	.name {
 		padding: 0 1.25rem;
-		text-transform: capitalize;
 		text-align: center;
 		font-family: 'Baloo 2', sans-serif;
 		font-weight: 700;

@@ -6,17 +6,21 @@ export const Cards = styled.main`
 	margin: 0 10rem;
 	padding-top: 2rem;
 
-	span {
-		font-family: 'Baloo 2', sans-serif;
-		font-weight: 800;
-		font-size: 2rem;
-		line-height: 130%;
-		color: ${(props) => props.theme['base-subtitle']};
-	}
-
 	@media (max-width: 768px) {
-		margin: 0 2rem;
+		margin: 0;
+		padding-top: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
+`;
+
+export const CardsTitle = styled.p`
+	font-family: 'Baloo 2', sans-serif;
+	font-weight: 800;
+	font-size: 2rem;
+	line-height: 130%;
+	color: ${(props) => props.theme['base-subtitle']};
 `;
 
 export const CardsList = styled.div`
@@ -24,4 +28,10 @@ export const CardsList = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	gap: 2rem;
+
+	@media (max-width: 768px) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 `;

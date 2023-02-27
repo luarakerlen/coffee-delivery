@@ -9,6 +9,7 @@ export const IntroContainer = styled.div`
 	/* background-size: cover; */
 
 	margin-top: 2rem;
+	padding-bottom: 2rem;
 `;
 
 export const IntroContent = styled.div`

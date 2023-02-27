@@ -4,6 +4,11 @@ export const ShoppingCartButtonContainer = styled.button`
 	position: relative;
   border: 0;
   border-radius: 6px;
+  transition: border-radius 0.2s;
+
+	&:hover {
+		border-radius: 50%;
+	}
 `;
 
 export const Counter = styled.div`

@@ -1,5 +1,3 @@
-import { Minus, Plus } from 'phosphor-react';
-import { useTheme } from 'styled-components';
 import { Cart } from '../../../../components/Cart';
 import { CoffeeInterface } from '../../../../interfaces/coffee';
 import {
@@ -16,8 +14,6 @@ interface CardProps {
 }
 
 export function Card({ coffee }: CardProps) {
-	const theme = useTheme();
-
 	return (
 		<CardContainer>
 			<main>
@@ -46,13 +42,9 @@ export function Card({ coffee }: CardProps) {
 
 				<BuyContainer>
 					<QuantityContainer>
-						<button>
-							<Minus size={14} color={theme.purple} weight='bold' />
-						</button>
+						<button>-</button>
 						<input type='number' min={1} value={1} />
-						<button>
-							<Plus size={14} color={theme.purple} weight='bold' />
-						</button>
+						<button>+</button>
 					</QuantityContainer>
 					<CardButton>
 						<Cart color='purple-dark' />

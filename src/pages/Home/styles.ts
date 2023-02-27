@@ -18,3 +18,5 @@ export const Cards = styled.div`
 		margin: 0 2rem;
 	}
 `;
+
+export const CardsList = styled.div``

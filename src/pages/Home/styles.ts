@@ -11,7 +11,7 @@ export const Cards = styled.main`
 		font-weight: 800;
 		font-size: 2rem;
 		line-height: 130%;
-		color: ${props => props.theme['base-subtitle']};
+		color: ${(props) => props.theme['base-subtitle']};
 	}
 
 	@media (max-width: 768px) {
@@ -20,6 +20,8 @@ export const Cards = styled.main`
 `;
 
 export const CardsList = styled.div`
+	margin-top: 3.375rem;
 	display: flex;
+	flex-wrap: wrap;
 	gap: 2rem;
-`
+`;

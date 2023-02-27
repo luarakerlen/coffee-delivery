@@ -8,7 +8,7 @@ export const darkTheme = {
   'base-hover': '#D7D5D5',
   'base-label': '#E6E5E5',
   'base-text': '#EDEDED',
-  'base-subtitle': '#E1E1E6',
+  'base-subtitle': '#F3F2F2',
   'base-title': '#FAFAFA',
 
   'purple-light': '#EBE5F9',

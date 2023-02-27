@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const HomeContainer = styled.div``;
 
-export const Cards = styled.div`
+export const Cards = styled.main`
 	margin: 0 10rem;
 	padding-top: 2rem;
 
@@ -19,4 +19,7 @@ export const Cards = styled.div`
 	}
 `;
 
-export const CardsList = styled.div``
+export const CardsList = styled.div`
+	display: flex;
+	gap: 2rem;
+`

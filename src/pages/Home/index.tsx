@@ -8,6 +8,7 @@ export interface CoffeeInterface {
 	description: string;
 	price: number;
 	tags: string[];
+	imageName: string;
 }
 
 export function Home() {
@@ -18,6 +19,15 @@ export function Home() {
 			description: 'O tradicional café feito com água quente e grãos moídos',
 			price: 9.9,
 			tags: ['tradicional'],
+			imageName: 'americano',
+		},
+		{
+			id: '2',
+			name: 'Expresso tradicional',
+			description: 'O tradicional café feito com água quente e grãos moídos',
+			price: 9.9,
+			tags: ['tradicional'],
+			imageName: 'americano',
 		},
 	];
 

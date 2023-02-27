@@ -4,7 +4,7 @@ import homeBackground from '../../../../assets/home-background.svg';
 export const IntroContainer = styled.div`
 	flex: 1;
 	width: 100%;
-	height: 34rem;
+	min-height: 34rem;
 	background-image: url(${homeBackground});
 	/* background-size: cover; */
 

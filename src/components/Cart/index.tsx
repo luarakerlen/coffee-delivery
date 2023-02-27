@@ -1,6 +1,7 @@
 import { ShoppingCart } from 'phosphor-react';
 import { CartContainer, Counter } from './styles';
 import { useTheme } from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 export function Cart() {
 	const theme = useTheme();
@@ -10,7 +11,9 @@ export function Cart() {
 
 	return (
 		<CartContainer>
-			<ShoppingCart size={22} weight='fill' color={theme['yellow-dark']} />
+			<NavLink to='/checkout' title='Carrinho de compras'>
+				<ShoppingCart size={22} weight='fill' color={theme['yellow-dark']} />
+			</NavLink>
 			{hasSomeProduct && <Counter>{products.length}</Counter>}
 		</CartContainer>
 	);

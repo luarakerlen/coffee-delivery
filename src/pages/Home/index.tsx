@@ -1,3 +1,11 @@
+import { Intro } from './components/Intro';
+import { Cards, HomeContainer } from './styles';
+
 export function Home() {
-	return <div>Home</div>;
+	return (
+		<HomeContainer>
+			<Intro />
+			<Cards>Cards</Cards>
+		</HomeContainer>
+	);
 }

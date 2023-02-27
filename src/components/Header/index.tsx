@@ -4,6 +4,7 @@ import { MapPin } from 'phosphor-react';
 import { useTheme } from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import { ShoppingCartButton } from '../ShoppingCartButton';
+import { Logo } from '../../assets/logo';
 
 export function Header() {
 	const theme = useTheme();
@@ -11,7 +12,7 @@ export function Header() {
 	return (
 		<HeaderContainer>
 			<NavLink to='/' title='Início'>
-				<img src={logo} alt='Logo Coffee Delivery' />
+				<Logo textColor={theme['base-subtitle']} />
 			</NavLink>
 			<HeaderContent>
 				<LocationContainer>

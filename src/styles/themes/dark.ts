@@ -1,15 +1,15 @@
 export const darkTheme = {
   white: '#FFFFFF',
-  background: '#FAFAFA',
+  background: '#272221',
 
-  'base-card': '#E1E1E6',
-  'base-input': '#EDEDED',
-  'base-button': '#E6E5E5',
+  'base-card': '#403937',
+  'base-input': '#574F4D',
+  'base-button': '#8D8686',
   'base-hover': '#D7D5D5',
-  'base-label': '#8D8686',
-  'base-text': '#574F4D',
-  'base-subtitle': '#403937',
-  'base-title': '#272221',
+  'base-label': '#E6E5E5',
+  'base-text': '#EDEDED',
+  'base-subtitle': '#E1E1E6',
+  'base-title': '#FAFAFA',
 
   'purple-light': '#EBE5F9',
   'purple': '#8047F8',

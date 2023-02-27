@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const ShoppingCartButtonContainer = styled.button`
 	position: relative;
   border: 0;
+  border-radius: 6px;
 `;
 
 export const Counter = styled.div`

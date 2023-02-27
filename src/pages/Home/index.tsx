@@ -5,7 +5,10 @@ export function Home() {
 	return (
 		<HomeContainer>
 			<Intro />
-			<Cards>Cards</Cards>
+
+			<Cards>
+				<span>Nossos cafés</span>
+			</Cards>
 		</HomeContainer>
 	);
 }

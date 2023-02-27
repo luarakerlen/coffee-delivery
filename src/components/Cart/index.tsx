@@ -1,20 +1,22 @@
 import { ShoppingCart } from 'phosphor-react';
-import { CartContainer, Counter } from './styles';
+import { CartContainer } from './styles';
 import { useTheme } from 'styled-components';
-import { NavLink } from 'react-router-dom';
 
-export function Cart() {
+interface CartProps {
+	color: 'yellow-light' | 'purple-dark';
+}
+
+export function Cart({ color }: CartProps) {
 	const theme = useTheme();
-	const products = [1, 2];
 
-	const hasSomeProduct = products.length > 0;
+	const iconColor = {
+		'yellow-light': 'yellow-dark',
+		'purple-dark': 'base-card',
+	} as const;
 
 	return (
-		<CartContainer>
-			<NavLink to='/checkout' title='Carrinho de compras'>
-				<ShoppingCart size={22} weight='fill' color={theme['yellow-dark']} />
-			</NavLink>
-			{hasSomeProduct && <Counter>{products.length}</Counter>}
+		<CartContainer color={color}>
+			<ShoppingCart size={22} weight='fill' color={theme[iconColor[color]]} />
 		</CartContainer>
 	);
 }

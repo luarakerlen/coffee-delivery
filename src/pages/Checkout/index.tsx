@@ -1,12 +1,20 @@
-import { CurrencyDollar, MapPinLine } from 'phosphor-react';
 import { useTheme } from 'styled-components';
 import { IconTitleDescription } from './components/IconTitleDescription';
+import { PaymentMethod } from './components/PaymentMethod';
+import {
+	Bank,
+	CreditCard,
+	CurrencyDollar,
+	MapPinLine,
+	Money,
+} from 'phosphor-react';
 import {
 	AddressContainer,
 	CheckoutContainer,
 	OrderConfirmationContainer,
 	OrderSummaryContainer,
 	PaymentContainer,
+	PaymentMethods,
 	SelectedCoffeesContainer,
 } from './styles';
 
@@ -31,6 +39,11 @@ export function Checkout() {
 						title='Pagamento'
 						description='O pagamento é feito na entrega. Escolha a forma que deseja pagar'
 					/>
+					<PaymentMethods>
+						<PaymentMethod title='Cartão de crédito' Icon={CreditCard} selected/>
+						<PaymentMethod title='Cartão de débito' Icon={Bank} />
+						<PaymentMethod title='Dinheiro' Icon={Money} />
+					</PaymentMethods>
 				</PaymentContainer>
 			</OrderConfirmationContainer>
 

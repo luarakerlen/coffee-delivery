@@ -20,24 +20,42 @@ export const CheckoutContainer = styled.div`
 
 export const OrderConfirmationContainer = styled.div`
 	width: 40rem;
+
+	@media (max-width: 768px) {
+		width: 100%;
+	}
 `;
 
 const DataContainer = styled.div`
 	width: 100%;
 	border-radius: 6px;
-  padding: 2.5rem;
+	padding: 2.5rem;
 	background-color: ${(props) => props.theme['base-card']};
 `;
 
 export const AddressContainer = styled(DataContainer)`
-  margin-bottom: 0.75rem;
+	margin-bottom: 0.75rem;
 `;
 
-export const PaymentContainer = styled(DataContainer)`
+export const PaymentContainer = styled(DataContainer)``;
+
+export const PaymentMethods = styled.div`
+	display: flex;
+	gap: 0.75rem;
+	justify-content: space-between;
+	margin-top: 2rem;
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+	}
 `;
 
 export const SelectedCoffeesContainer = styled.div`
 	width: 28rem;
+
+	@media (max-width: 768px) {
+		width: 100%;
+	}
 `;
 
 export const OrderSummaryContainer = styled.div``;

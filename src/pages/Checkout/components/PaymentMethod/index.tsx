@@ -2,16 +2,21 @@ import { IconProps } from 'phosphor-react';
 import { useTheme } from 'styled-components';
 import { PaymentMethodContainer } from './styles';
 
-interface Props {
+interface PaymentMethodProps {
 	selected?: boolean;
 	title: string;
 	Icon: React.ForwardRefExoticComponent<
 		IconProps & React.RefAttributes<SVGSVGElement>
 	>;
-	onClick: (method: string) => void
+	onClick: (method: string) => void;
 }
 
-export function PaymentMethod({ Icon, title, selected = false, onClick }: Props) {
+export function PaymentMethod({
+	Icon,
+	title,
+	selected = false,
+	onClick,
+}: PaymentMethodProps) {
 	const theme = useTheme();
 
 	return (

@@ -1,12 +1,16 @@
 import { IconTitleDescriptionContainer } from './styles';
 
-interface Props {
+interface IconTitleDescriptionProps {
 	icon: JSX.Element;
 	title: string;
 	description: string;
 }
 
-export function IconTitleDescription({ icon, title, description }: Props) {
+export function IconTitleDescription({
+	icon,
+	title,
+	description,
+}: IconTitleDescriptionProps) {
 	return (
 		<IconTitleDescriptionContainer>
 			<div>{icon}</div>

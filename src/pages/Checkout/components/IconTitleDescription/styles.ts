@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const IconTitleDescriptionContainer = styled.div`
 	display: flex;
 	gap: 0.5rem;
+	margin-bottom: 2rem;
 
 	.title {
 		line-height: 130%;

@@ -7,12 +7,16 @@ import { initialPaymentMethods } from '../../data/paymentMethods';
 import {
 	AddressContainer,
 	CheckoutContainer,
+	FormContainer,
+	LineFour,
+	LineThree,
 	OrderConfirmationContainer,
 	OrderSummaryContainer,
 	PaymentContainer,
 	PaymentMethods,
 	SelectedCoffeesContainer,
 } from './styles';
+import { FormInput } from './components/FormInput';
 
 export function Checkout() {
 	const theme = useTheme();
@@ -46,6 +50,19 @@ export function Checkout() {
 						title='Endereço de Entrega'
 						description='Informe o endereço onde deseja receber seu pedido'
 					/>
+					<FormContainer>
+						<FormInput placeholder='CEP' customWidth={40} />
+						<FormInput placeholder='Rua' />
+						<LineThree>
+							<FormInput placeholder='Número' customWidth={40} />
+							<FormInput placeholder='Complemento' optional customFlex={1} />
+						</LineThree>
+						<LineFour>
+							<FormInput placeholder='Bairro' customWidth={40} />
+							<FormInput placeholder='Cidade' customWidth={50} />
+							<FormInput placeholder='UF'  />
+						</LineFour>
+					</FormContainer>
 				</AddressContainer>
 
 				<PaymentContainer>

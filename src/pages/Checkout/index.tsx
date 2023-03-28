@@ -1,13 +1,9 @@
+import { useState } from 'react';
 import { useTheme } from 'styled-components';
 import { IconTitleDescription } from './components/IconTitleDescription';
 import { PaymentMethod } from './components/PaymentMethod';
-import {
-	Bank,
-	CreditCard,
-	CurrencyDollar,
-	MapPinLine,
-	Money,
-} from 'phosphor-react';
+import { CurrencyDollar, MapPinLine } from 'phosphor-react';
+import { initialPaymentMethods } from '../../data/paymentMethods';
 import {
 	AddressContainer,
 	CheckoutContainer,
@@ -20,6 +16,25 @@ import {
 
 export function Checkout() {
 	const theme = useTheme();
+	const [paymentMethods, setPaymentMethods] = useState(initialPaymentMethods);
+
+	function onChoosePaymentMethod(title: string) {
+		const newPaymentMethods = paymentMethods.map((paymentMethod) => {
+			if (paymentMethod.title === title) {
+				return {
+					...paymentMethod,
+					selected: true,
+				};
+			} else {
+				return {
+					...paymentMethod,
+					selected: false,
+				};
+			}
+		});
+
+		setPaymentMethods(newPaymentMethods);
+	}
 
 	return (
 		<CheckoutContainer>
@@ -40,9 +55,17 @@ export function Checkout() {
 						description='O pagamento é feito na entrega. Escolha a forma que deseja pagar'
 					/>
 					<PaymentMethods>
-						<PaymentMethod title='Cartão de crédito' Icon={CreditCard} selected/>
-						<PaymentMethod title='Cartão de débito' Icon={Bank} />
-						<PaymentMethod title='Dinheiro' Icon={Money} />
+						{paymentMethods.map((paymentMethod) => {
+							return (
+								<PaymentMethod
+									key={paymentMethod.title}
+									title={paymentMethod.title}
+									Icon={paymentMethod.icon}
+									selected={paymentMethod.selected}
+									onClick={onChoosePaymentMethod}
+								/>
+							);
+						})}
 					</PaymentMethods>
 				</PaymentContainer>
 			</OrderConfirmationContainer>

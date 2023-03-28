@@ -8,13 +8,14 @@ interface Props {
 	Icon: React.ForwardRefExoticComponent<
 		IconProps & React.RefAttributes<SVGSVGElement>
 	>;
+	onClick: (method: string) => void
 }
 
-export function PaymentMethod({ Icon, title, selected = false }: Props) {
+export function PaymentMethod({ Icon, title, selected = false, onClick }: Props) {
 	const theme = useTheme();
 
 	return (
-		<PaymentMethodContainer selected={selected}>
+		<PaymentMethodContainer selected={selected} onClick={() => onClick(title)}>
 			<div>
 				<Icon size={16} color={theme.purple} />
 			</div>

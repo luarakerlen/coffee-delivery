@@ -51,16 +51,16 @@ export function Checkout() {
 						description='Informe o endereço onde deseja receber seu pedido'
 					/>
 					<FormContainer>
-						<FormInput placeholder='CEP' customWidth={40} />
+						<FormInput placeholder='CEP' customWidth={'200px'} />
 						<FormInput placeholder='Rua' />
 						<LineThree>
-							<FormInput placeholder='Número' customWidth={40} />
-							<FormInput placeholder='Complemento' optional customFlex={1} />
+							<FormInput placeholder='Número' customWidth={'200px'} />
+							<FormInput placeholder='Complemento' customFlex={1} optional />
 						</LineThree>
 						<LineFour>
-							<FormInput placeholder='Bairro' customWidth={40} />
-							<FormInput placeholder='Cidade' customWidth={50} />
-							<FormInput placeholder='UF'  />
+							<FormInput placeholder='Bairro' customWidth={'200px'} />
+							<FormInput placeholder='Cidade' customFlex={1} />
+							<FormInput placeholder='UF' customWidth={'60px'} />
 						</LineFour>
 					</FormContainer>
 				</AddressContainer>

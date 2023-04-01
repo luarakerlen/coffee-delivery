@@ -19,7 +19,7 @@ export const CheckoutContainer = styled.div`
 `;
 
 export const OrderConfirmationContainer = styled.div`
-	width: 40rem;
+	width: 42rem;
 
 	@media (max-width: 768px) {
 		width: 100%;
@@ -44,14 +44,12 @@ export const FormContainer = styled.div`
 `;
 
 export const LineThree = styled.div`
-	/* width: 100%; */
-	/* display: flex; */
+	display: flex;
 	gap: 0.75rem;
 `;
 
 export const LineFour = styled.div`
-	/* width: 100%; */
-	/* display: flex; */
+	display: flex;
 	gap: 0.75rem;
 `;
 

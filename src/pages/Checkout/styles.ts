@@ -7,9 +7,11 @@ export const CheckoutContainer = styled.div`
 
 	.containerTitle {
 		font-family: 'Baloo 2', sans-serif;
+		font-weight: 700;
 		font-size: 1.125rem;
 		line-height: 130%;
 		margin-bottom: 0.9375rem;
+		color: ${props => props.theme['base-subtitle']};
 	}
 
 	@media (max-width: 768px) {
@@ -17,11 +19,3 @@ export const CheckoutContainer = styled.div`
 		flex-direction: column;
 	}
 `;
-
-export const SelectedCoffeesContainer = styled.div`
-	@media (max-width: 768px) {
-		width: 100%;
-	}
-`;
-
-export const OrderSummaryContainer = styled.div``;

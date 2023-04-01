@@ -1,19 +1,12 @@
 import { OrderConfirmation } from './components/OrderConfirmation';
-import {
-	CheckoutContainer,
-	OrderSummaryContainer,
-	SelectedCoffeesContainer,
-} from './styles';
+import { SelectedCoffees } from './components/SelectedCoffees';
+import { CheckoutContainer } from './styles';
 
 export function Checkout() {
 	return (
 		<CheckoutContainer>
 			<OrderConfirmation />
-
-			<SelectedCoffeesContainer>
-				<p className='containerTitle'>Cafés selecionados</p>
-				<OrderSummaryContainer></OrderSummaryContainer>
-			</SelectedCoffeesContainer>
+			<SelectedCoffees />
 		</CheckoutContainer>
 	);
 }

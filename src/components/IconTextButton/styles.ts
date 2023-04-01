@@ -1,16 +1,16 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 interface ContainerProps {
 	selected: boolean;
+	small: boolean;
 }
 
-export const PaymentMethodContainer = styled.button<ContainerProps>`
+export const IconTextButtonContainer = styled.button<ContainerProps>`
 	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 0.75rem;
-	padding: 1rem;
+
 	border-radius: 6px;
 	cursor: pointer;
 
@@ -22,6 +22,9 @@ export const PaymentMethodContainer = styled.button<ContainerProps>`
 
 	background-color: ${(props) =>
 		props.selected ? props.theme['purple-light'] : props.theme['base-button']};
+
+	gap: ${(props) => (props.small ? '0.25rem' : '0.75rem')};
+	padding: ${(props) => (props.small ? '0.5rem' : '1rem')};
 
 	div {
 		display: flex;

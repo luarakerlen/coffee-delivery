@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
 export const SelectedCoffeesContainer = styled.div`
+	flex: 1;
+	
 	@media (max-width: 768px) {
 		width: 100%;
 	}
 `;
 
 export const OrderSummaryContainer = styled.div`
-	height: 100px;
-
 	width: 100%;
 	border-radius: 6px 44px;
 	padding: 2.5rem;

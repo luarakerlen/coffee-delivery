@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { CurrencyDollar, MapPinLine } from 'phosphor-react';
 import { initialPaymentMethods } from '../../../../data/paymentMethods';
 import { IconTitleDescription } from './IconTitleDescription';
-import { PaymentMethod } from './PaymentMethod';
+import { IconTextButton } from '../../../../components/IconTextButton';
 import { FormInput } from './FormInput';
 import {
 	AddressContainer,
@@ -15,12 +15,11 @@ import {
 	PaymentMethods,
 } from './styles';
 
-
 export function OrderConfirmation() {
 	const theme = useTheme();
 	const [paymentMethods, setPaymentMethods] = useState(initialPaymentMethods);
 
-	function onChoosePaymentMethod(title: string) {
+	function onChoosePaymentMethod(title?: string) {
 		const newPaymentMethods = paymentMethods.map((paymentMethod) => {
 			if (paymentMethod.title === title) {
 				return {
@@ -37,7 +36,7 @@ export function OrderConfirmation() {
 
 		setPaymentMethods(newPaymentMethods);
 	}
-	
+
 	return (
 		<OrderConfirmationContainer>
 			<p className='containerTitle'>Complete seu pedido</p>
@@ -71,7 +70,7 @@ export function OrderConfirmation() {
 				<PaymentMethods>
 					{paymentMethods.map((paymentMethod) => {
 						return (
-							<PaymentMethod
+							<IconTextButton
 								key={paymentMethod.title}
 								title={paymentMethod.title}
 								Icon={paymentMethod.icon}

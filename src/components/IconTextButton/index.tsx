@@ -1,30 +1,36 @@
 import { IconProps } from 'phosphor-react';
 import { useTheme } from 'styled-components';
-import { PaymentMethodContainer } from './styles';
+import { IconTextButtonContainer } from './styles';
 
-interface PaymentMethodProps {
+interface IconTextButtonProps {
 	selected?: boolean;
 	title: string;
 	Icon: React.ForwardRefExoticComponent<
 		IconProps & React.RefAttributes<SVGSVGElement>
 	>;
-	onClick: (method: string) => void;
+	onClick: (method?: string) => void;
+	small?: boolean;
 }
 
-export function PaymentMethod({
+export function IconTextButton({
 	Icon,
 	title,
 	selected = false,
 	onClick,
-}: PaymentMethodProps) {
+	small = false,
+}: IconTextButtonProps) {
 	const theme = useTheme();
 
 	return (
-		<PaymentMethodContainer selected={selected} onClick={() => onClick(title)}>
+		<IconTextButtonContainer
+			selected={selected}
+			small={small}
+			onClick={() => onClick(title)}
+		>
 			<div>
 				<Icon size={16} color={theme.purple} />
 			</div>
 			<p>{title}</p>
-		</PaymentMethodContainer>
+		</IconTextButtonContainer>
 	);
 }

@@ -1,11 +1,11 @@
 import { Cart } from '../../../../components/Cart';
+import { QuantityButton } from '../../../../components/QuantityButton';
 import { CoffeeInterface } from '../../../../interfaces/coffee';
 import {
 	BuyContainer,
 	CardButton,
 	CardContainer,
 	PriceContainer,
-	QuantityContainer,
 	TagsContainer,
 } from './styles';
 
@@ -41,11 +41,7 @@ export function Card({ coffee }: CardProps) {
 				</PriceContainer>
 
 				<BuyContainer>
-					<QuantityContainer>
-						<button>-</button>
-						<input type='number' min={1} value={1} />
-						<button>+</button>
-					</QuantityContainer>
+					<QuantityButton/>
 					<CardButton>
 						<Cart color='purple-dark' />
 					</CardButton>

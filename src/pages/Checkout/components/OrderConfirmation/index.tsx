@@ -2,9 +2,9 @@ import { useTheme } from 'styled-components';
 import { useState } from 'react';
 import { CurrencyDollar, MapPinLine } from 'phosphor-react';
 import { initialPaymentMethods } from '../../../../data/paymentMethods';
-import { IconTitleDescription } from '../IconTitleDescription';
-import { PaymentMethod } from '../PaymentMethod';
-import { FormInput } from '../FormInput';
+import { IconTitleDescription } from './IconTitleDescription';
+import { PaymentMethod } from './PaymentMethod';
+import { FormInput } from './FormInput';
 import {
 	AddressContainer,
 	FormContainer,

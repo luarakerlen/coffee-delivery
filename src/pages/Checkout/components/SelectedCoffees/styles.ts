@@ -6,4 +6,11 @@ export const SelectedCoffeesContainer = styled.div`
 	}
 `;
 
-export const OrderSummaryContainer = styled.div``;
+export const OrderSummaryContainer = styled.div`
+	height: 100px;
+
+	width: 100%;
+	border-radius: 6px 44px;
+	padding: 2.5rem;
+	background-color: ${(props) => props.theme['base-card']};
+`;

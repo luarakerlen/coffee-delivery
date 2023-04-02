@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const OrderConfirmationContainer = styled.div`
-	width: 60%;
+	width: 55%;
 
 	@media (max-width: 768px) {
 		width: 100%;

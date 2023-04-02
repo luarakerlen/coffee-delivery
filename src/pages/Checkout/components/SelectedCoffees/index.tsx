@@ -1,6 +1,11 @@
 import uuid from 'react-uuid';
 import { Item } from './Item';
-import { OrderSummaryContainer, SelectedCoffeesContainer } from './styles';
+import {
+	OrderSummaryContainer,
+	SelectedCoffeesContainer,
+	ValuesContainer,
+} from './styles';
+import { TextAndPrice } from './TextAndPrice';
 
 export function SelectedCoffees() {
 	const selectedCoffees = [
@@ -27,6 +32,11 @@ export function SelectedCoffees() {
 		},
 	];
 
+	const deliveryPrice = 3.5;
+	const totalValue = selectedCoffees.reduce((acc, curr) => {
+		return acc + curr.price * curr.quantity;
+	}, 0);
+
 	return (
 		<SelectedCoffeesContainer>
 			<p className='containerTitle'>Cafés selecionados</p>
@@ -36,6 +46,11 @@ export function SelectedCoffees() {
 						<Item key={selectedCoffee.id} selectedCoffee={selectedCoffee} />
 					);
 				})}
+				<ValuesContainer>
+					<TextAndPrice text='Total de itens' price={totalValue} />
+					<TextAndPrice text='Entrega' price={deliveryPrice} />
+					<TextAndPrice text='Total' price={totalValue + deliveryPrice} bold />
+				</ValuesContainer>
 			</OrderSummaryContainer>
 		</SelectedCoffeesContainer>
 	);

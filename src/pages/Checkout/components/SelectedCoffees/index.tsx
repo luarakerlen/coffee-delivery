@@ -1,6 +1,8 @@
+import { useNavigate } from 'react-router-dom';
 import uuid from 'react-uuid';
 import { Item } from './Item';
 import {
+	ConfirmButton,
 	OrderSummaryContainer,
 	SelectedCoffeesContainer,
 	ValuesContainer,
@@ -8,6 +10,8 @@ import {
 import { TextAndPrice } from './TextAndPrice';
 
 export function SelectedCoffees() {
+	const navigate = useNavigate();
+
 	const selectedCoffees = [
 		{
 			id: uuid(),
@@ -37,6 +41,10 @@ export function SelectedCoffees() {
 		return acc + curr.price * curr.quantity;
 	}, 0);
 
+	function handleConfirmOrder() {
+		navigate('/success');
+	}
+
 	return (
 		<SelectedCoffeesContainer>
 			<p className='containerTitle'>Cafés selecionados</p>
@@ -51,6 +59,9 @@ export function SelectedCoffees() {
 					<TextAndPrice text='Entrega' price={deliveryPrice} />
 					<TextAndPrice text='Total' price={totalValue + deliveryPrice} bold />
 				</ValuesContainer>
+				<ConfirmButton onClick={handleConfirmOrder}>
+					CONFIRMAR PEDIDO
+				</ConfirmButton>
 			</OrderSummaryContainer>
 		</SelectedCoffeesContainer>
 	);

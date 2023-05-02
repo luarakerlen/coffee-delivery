@@ -8,7 +8,7 @@ import {
 } from './styles';
 import deliveryImg from '../../assets/delivery.svg';
 import { IconText } from './components/IconText';
-import { MapPin } from 'phosphor-react';
+import { CurrencyDollar, MapPin, Timer } from 'phosphor-react';
 
 export function Success() {
 	return (
@@ -27,9 +27,22 @@ export function Success() {
 						Icon={MapPin}
 						color='purple'
 					/>
+					<IconText
+						firstText='Previsão de entrega'
+						secondText={<strong>20 min - 30 min</strong>}
+						Icon={Timer}
+						color='yellow'
+					/>
+					<IconText
+						firstText='Pagamento na entrega'
+						secondText={<strong>Cartão de Crédito</strong>}
+						Icon={CurrencyDollar}
+						color='yellow-dark'
+					/>
 				</Infos>
 				<Image>
 					<img
+						style={{ height: '100%' }}
 						src={deliveryImg}
 						alt='Imagem de um homem em cima de uma motocicleta.'
 					/>

@@ -24,7 +24,6 @@ export const Subtitle = styled.p`
 export const Content = styled.div`
 	margin-top: 2.5rem;
 	display: flex;
-	justify-content: space-between;
 	align-items: flex-start;
 `;
 
@@ -39,7 +38,8 @@ export const Infos = styled.div`
 	gap: 2rem;
 	border-radius: 6px 36px;
 
-	width: 50%;
+	width: 40%;
+	margin-right: 6rem;
 
 	@media (max-width: 768px) {
 		width: 100%;

@@ -21,12 +21,10 @@ export const IconContainer = styled.div<IconContainerProps>`
 	background-color: ${(props) => props.theme[props.color]};
 `;
 
-export const TextContainer = styled.div``;
-
-export const FirstText = styled.p`
+export const FirstText = styled.div`
 	color: ${(props) => props.theme['base-text']};
 `;
 
-export const SecondText = styled.p`
+export const SecondText = styled.div`
 	color: ${(props) => props.theme['base-text']};
 `;

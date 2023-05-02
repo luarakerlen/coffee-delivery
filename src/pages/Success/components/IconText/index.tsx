@@ -4,7 +4,6 @@ import {
 	IconTextContainer,
 	FirstText,
 	SecondText,
-	TextContainer,
 	IconContainer,
 } from './styles';
 
@@ -30,10 +29,10 @@ export function IconText({
 			<IconContainer color={color}>
 				<Icon color={theme.background} weight='fill' />
 			</IconContainer>
-			<TextContainer>
+			<div>
 				<FirstText>{firstText}</FirstText>
 				<SecondText>{secondText}</SecondText>
-			</TextContainer>
+			</div>
 		</IconTextContainer>
 	);
 }

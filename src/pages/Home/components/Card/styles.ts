@@ -71,7 +71,7 @@ export const TagsContainer = styled.div`
 `;
 
 export const PriceContainer = styled.p`
-	font-family: 'Baloo 2';
+	font-family: 'Baloo 2', sans-serif;
 	font-weight: 800;
 	font-size: 1.5rem;
 	color: ${(props) => props.theme['base-text']};

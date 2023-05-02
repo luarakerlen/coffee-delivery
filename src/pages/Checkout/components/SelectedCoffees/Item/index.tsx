@@ -28,7 +28,7 @@ export function Item({ selectedCoffee }: ItemProps) {
 		<ItemContainer>
 			<ItemContent>
 				<CoffeeImage
-					src={`../../../../../../public/coffees/${selectedCoffee.imageName}.svg`}
+					src={`/coffees/${selectedCoffee.imageName}.svg`}
 					alt={selectedCoffee.name}
 				/>
 				<Infos>

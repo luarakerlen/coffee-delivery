@@ -18,7 +18,7 @@ export function Card({ coffee }: CardProps) {
 		<CardContainer>
 			<main>
 				<img
-					src={`../../../../../public/coffees/${coffee.imageName}.svg`}
+					src={`/coffees/${coffee.imageName}.svg`}
 					alt='Café'
 				/>
 
